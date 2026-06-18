@@ -5,597 +5,231 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Sharath Chandran & Sowmya — The Wedding Morning</title>
   <meta name="theme-color" content="#8f5c2c" />
-  <meta
-    name="description"
-    content="With the blessings of our families, we invite you to the wedding of Sharath Chandran & Sowmya on 24 June 2026 in Hyderabad."
-  />
+  <meta name="description" content="With the blessings of our families, we invite you to the wedding of Sharath Chandran & Sowmya on 24 June 2026 in Hyderabad." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Marcellus&family=Mukta:wght@300;400;500;600&family=Tiro+Devanagari+Sanskrit&family=Tiro+Telugu&display=swap"
-    rel="stylesheet"
-  />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Marcellus&family=Mukta:wght@300;400;500;600&family=Tiro+Devanagari+Sanskrit&family=Tiro+Telugu&display=swap" rel="stylesheet" />
 
   <style>
     :root {
-      --bg-top: #2b1a1e;
-      --bg-mid: #874c3b;
-      --bg-bottom: #f4d7a1;
-
-      --ivory: #fffaf2;
-      --sand: #f5ead7;
-      --sand-2: #ead8bc;
-      --gold: #d7a459;
-      --gold-deep: #9c6c33;
-      --verm: #a94c42;
-      --teal: #1f5b52;
-      --ink: #3f2a20;
-      --rose: #d98974;
-      --shadow: rgba(60, 28, 18, 0.16);
-
+      --bg-top: #2b1a1e; --bg-mid: #874c3b; --bg-bottom: #f4d7a1;
+      --ivory: #fffaf2; --sand: #f5ead7; --gold: #d7a459; --gold-deep: #9c6c33;
+      --verm: #a94c42; --teal: #1f5b52; --ink: #3f2a20; --rose: #d98974;
       --display: "Fraunces", "Cormorant Garamond", serif;
-      --classic: "Marcellus", serif;
-      --body-serif: "Cormorant Garamond", serif;
-      --sans: "Mukta", sans-serif;
-      --deva: "Tiro Devanagari Sanskrit", serif;
-      --telugu: "Tiro Telugu", serif;
-
-      --ease: cubic-bezier(.22,1,.36,1);
-      --ease-soft: cubic-bezier(.19,1,.22,1);
+      --classic: "Marcellus", serif; --body-serif: "Cormorant Garamond", serif;
+      --sans: "Mukta", sans-serif; --deva: "Tiro Devanagari Sanskrit", serif;
+      --telugu: "Tiro Telugu", serif; --ease: cubic-bezier(.22,1,.36,1);
     }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      -webkit-tap-highlight-color: transparent;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
+    * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+    html { scroll-behavior: smooth; }
     body {
-      font-family: var(--sans);
-      color: var(--ink);
-      background:
-        radial-gradient(circle at 50% 15%, rgba(255, 227, 169, .16), transparent 28%),
-        linear-gradient(180deg, var(--bg-top) 0%, var(--bg-mid) 28%, #dfb577 52%, var(--ivory) 72%, var(--ivory) 100%);
-      min-height: 100vh;
-      overflow-x: hidden;
+      font-family: var(--sans); color: var(--ink);
+      background: linear-gradient(180deg, var(--bg-top) 0%, var(--bg-mid) 28%, #dfb577 52%, var(--ivory) 72%, var(--ivory) 100%);
+      min-height: 100vh; overflow-x: hidden;
     }
-
-    body.locked {
-      overflow: hidden;
-      height: 100vh;
-    }
-
-    img, svg {
-      max-width: 100%;
-      display: block;
-    }
-
-    button, a {
-      font: inherit;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .sr-only {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0,0,0,0);
-      white-space: nowrap;
-      border: 0;
-    }
+    body.locked { overflow: hidden; height: 100vh; }
 
     .shell {
-      width: 100%;
-      max-width: 680px;
-      margin: 0 auto;
-      position: relative;
-      background:
-        radial-gradient(circle at 50% 0%, rgba(255, 232, 183, .18), transparent 20%),
-        linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.04)),
-        var(--ivory);
-      box-shadow: 0 0 0 1px rgba(156,108,51,.12);
-      overflow: hidden;
-    }
-
-    .shell::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
-      opacity: .28;
-      background-image:
-        radial-gradient(rgba(156,108,51,.10) 0.7px, transparent 0.7px);
-      background-size: 12px 12px;
-      mask-image: linear-gradient(180deg, rgba(0,0,0,.5), transparent 22%, rgba(0,0,0,.35), rgba(0,0,0,.5));
+      width: 100%; max-width: 680px; margin: 0 auto; position: relative;
+      background: var(--ivory); box-shadow: 0 0 0 1px rgba(156,108,51,.12); overflow: hidden;
     }
 
     .frame {
-      position: fixed;
-      inset: 12px;
-      max-width: 656px;
-      margin: 0 auto;
-      pointer-events: none;
-      z-index: 20;
-      border: 1.5px solid rgba(215,164,89,.72);
+      position: fixed; inset: 12px; max-width: 656px; margin: 0 auto;
+      pointer-events: none; z-index: 20; border: 1.5px solid rgba(215,164,89,.72);
       box-shadow: inset 0 0 0 1px rgba(255, 233, 191, .35);
     }
-
-    .frame .corner {
-      position: absolute;
-      width: 30px;
-      height: 30px;
-      color: var(--gold);
-    }
-
+    .frame .corner { position: absolute; width: 30px; height: 30px; color: var(--gold); }
     .frame .tl { top: -1px; left: -1px; }
     .frame .tr { top: -1px; right: -1px; transform: scaleX(-1); }
     .frame .bl { bottom: -1px; left: -1px; transform: scaleY(-1); }
     .frame .br { bottom: -1px; right: -1px; transform: scale(-1); }
+    .frame svg path { stroke: currentColor; fill: none; stroke-width: 1.4; }
 
-    .frame svg path {
-      stroke: currentColor;
-      fill: none;
-      stroke-width: 1.4;
-    }
+    section { position: relative; padding: 72px 28px; text-align: center; z-index: 1; }
+    @media (min-width: 640px) { section { padding: 84px 48px; } }
 
-    section {
-      position: relative;
-      padding: 72px 28px;
-      text-align: center;
-      z-index: 1;
-    }
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity 1s var(--ease), transform 1s var(--ease); }
+    .reveal.in { opacity: 1; transform: translateY(0); }
 
-    @media (min-width: 640px) {
-      section {
-        padding: 84px 48px;
-      }
-    }
-
-    .reveal {
-      opacity: 0;
-      transform: translateY(24px);
-      transition: opacity 1s var(--ease), transform 1s var(--ease);
-    }
-
-    .reveal.in {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .kicker {
-      font-size: 11px;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: var(--gold-deep);
-      margin-bottom: 14px;
-    }
-
-    .divider {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      margin: 22px auto;
-      color: var(--gold);
-    }
-
-    .divider::before,
-    .divider::after {
-      content: "";
-      width: 52px;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, currentColor);
-    }
-
-    .divider::after {
-      background: linear-gradient(90deg, currentColor, transparent);
-    }
-
-    .divider svg {
-      width: 16px;
-      height: 16px;
-      fill: currentColor;
-    }
+    .divider { display: flex; align-items: center; justify-content: center; gap: 10px; margin: 22px auto; color: var(--gold); }
+    .divider::before, .divider::after { content: ""; width: 52px; height: 1px; background: linear-gradient(90deg, transparent, currentColor); }
+    .divider::after { background: linear-gradient(90deg, currentColor, transparent); }
+    .divider svg { width: 16px; height: 16px; fill: currentColor; }
 
     /* INTRO */
     #intro {
-      position: fixed;
-      inset: 0;
-      z-index: 200;
-      display: grid;
-      place-items: center;
-      overflow: hidden;
-      background:
-        radial-gradient(circle at 50% 72%, rgba(255, 215, 132, .14), transparent 22%),
-        linear-gradient(180deg, #1f1418 0%, #3b2325 35%, #874b3a 60%, #d7a15a 100%);
+      position: fixed; inset: 0; z-index: 200; display: grid; place-items: center;
+      background: linear-gradient(180deg, #1f1418 0%, #3b2325 35%, #874b3a 60%, #d7a15a 100%);
       transition: opacity 1.2s ease, visibility 1.2s ease;
     }
-
-    #intro.hidden {
-      opacity: 0;
-      visibility: hidden;
-      pointer-events: none;
-    }
-
-    .intro-glow {
-      position: absolute;
-      width: 60vmin;
-      height: 60vmin;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(255, 217, 143, .18), transparent 62%);
-      filter: blur(8px);
-      bottom: 12vh;
-      left: 50%;
-      transform: translateX(-50%);
-      animation: glowPulse 4s ease-in-out infinite;
-    }
-
-    @keyframes glowPulse {
-      0%, 100% { transform: translateX(-50%) scale(1); opacity: 0.8; }
-      50% { transform: translateX(-50%) scale(1.1); opacity: 1; }
-    }
-
-    .intro-content {
-      position: relative;
-      z-index: 2;
-      text-align: center;
-      padding: 28px;
-      color: #fff3de;
-      max-width: 460px;
-    }
-
-    .diya {
-      width: 96px;
-      height: 96px;
-      margin: 0 auto 18px;
-      position: relative;
-    }
-
-    .flame {
-      transform-origin: center bottom;
-      animation: flameFlicker 1.8s ease-in-out infinite;
-      filter: drop-shadow(0 0 14px rgba(255, 211, 117, .7));
-    }
-
-    @keyframes flameFlicker {
-      0%, 100% { transform: scaleY(1) rotate(0deg); }
-      50% { transform: scaleY(1.05) rotate(2deg); }
-    }
-
-    .intro-mantra {
-      font-family: var(--deva);
-      font-size: clamp(20px, 4vw, 28px);
-      color: #ffe9c2;
-      letter-spacing: .4px;
-    }
-
-    .intro-sub {
-      margin-top: 8px;
-      font-family: var(--classic);
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      font-size: 11px;
-      color: rgba(255,243,222,.82);
-    }
-
-    .intro-names {
-      margin-top: 20px;
-      font-family: var(--telugu);
-      font-size: clamp(18px, 4.2vw, 24px);
-      color: #fff9ed;
-    }
-
-    .intro-line {
-      margin: 20px auto 0;
-      max-width: 300px;
-      font-family: var(--body-serif);
-      font-style: italic;
-      font-size: 20px;
-      line-height: 1.4;
-      color: rgba(255, 244, 225, .92);
-    }
-
+    #intro.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+    .intro-content { position: relative; z-index: 2; text-align: center; padding: 28px; color: #fff3de; max-width: 460px; }
+    .diya { width: 96px; height: 96px; margin: 0 auto 18px; }
+    .flame { transform-origin: center bottom; animation: flameFlicker 1.8s ease-in-out infinite; filter: drop-shadow(0 0 14px rgba(255, 211, 117, .7)); }
+    @keyframes flameFlicker { 0%, 100% { transform: scaleY(1) rotate(0deg); } 50% { transform: scaleY(1.05) rotate(2deg); } }
+    .intro-mantra { font-family: var(--deva); font-size: clamp(20px, 4vw, 28px); color: #ffe9c2; letter-spacing: .4px; }
+    .intro-sub { margin-top: 8px; font-family: var(--classic); letter-spacing: 3px; text-transform: uppercase; font-size: 11px; color: rgba(255,243,222,.82); }
     .begin-btn {
-      margin-top: 30px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      min-width: 180px;
-      padding: 13px 22px;
-      border: 1px solid rgba(255, 228, 177, .9);
-      color: #fff6e7;
-      background: rgba(255,255,255,.06);
-      backdrop-filter: blur(4px);
-      border-radius: 999px;
-      cursor: pointer;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      font-size: 12px;
-      transition: transform .25s ease, background .25s ease, color .25s ease;
+      margin-top: 30px; display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+      min-width: 180px; padding: 13px 22px; border: 1px solid rgba(255, 228, 177, .9); color: #fff6e7;
+      background: rgba(255,255,255,.06); backdrop-filter: blur(4px); border-radius: 999px; cursor: pointer;
+      letter-spacing: 1.5px; text-transform: uppercase; font-size: 12px; transition: transform .25s ease, background .25s ease;
     }
-
-    .begin-btn:hover,
-    .begin-btn:focus-visible {
-      background: rgba(255, 232, 183, .18);
-      transform: translateY(-1px);
-      outline: none;
-    }
-
-    .begin-btn:active {
-      transform: scale(.98);
-    }
-
-    .sun-rise {
-      position: absolute;
-      left: 50%;
-      bottom: -22vmin;
-      transform: translateX(-50%);
-      width: 64vmin;
-      height: 64vmin;
-      border-radius: 50%;
-      background: radial-gradient(circle at 50% 50%, #fff1c7 0%, #efc37e 34%, rgba(239,195,126,.55) 58%, transparent 70%);
-      opacity: .75;
-      filter: blur(2px);
-    }
+    .begin-btn:hover { background: rgba(255, 232, 183, .18); transform: translateY(-1px); }
 
     /* HERO */
-    #hero {
-      padding-top: 90px;
-      background:
-        radial-gradient(circle at 50% 0%, rgba(255, 228, 170, .8), transparent 34%),
-        linear-gradient(180deg, rgba(215,164,89,.08), transparent 75%);
-    }
+    #hero { padding-top: 90px; min-height: 100vh; display: grid; place-items: center; }
+    .eyebrow { margin-top: 28px; color: var(--teal); font-family: var(--body-serif); font-size: 20px; font-style: italic; }
+    .couple { margin-top: 16px; }
+    .couple .name { display: block; font-family: var(--display); color: var(--verm); font-weight: 600; font-size: clamp(40px, 8vw, 58px); line-height: 1.08; letter-spacing: .4px; }
+    .couple .amp { display: block; margin: 8px 0 4px; font-family: var(--body-serif); font-size: 34px; color: var(--gold-deep); font-style: italic; }
+    .telugu-line { margin-top: 14px; font-family: var(--telugu); font-size: 22px; color: var(--gold-deep); }
+    .hero-text { margin: 24px auto 0; max-width: 460px; font-family: var(--body-serif); font-size: 24px; line-height: 1.35; color: var(--ink); }
 
-    .sun-mandala {
-      width: 220px;
-      height: 220px;
-      margin: 0 auto 12px;
-      position: relative;
-    }
+    /* COUNTDOWN */
+    .countdown { display: flex; gap: 12px; justify-content: center; margin-top: 32px; flex-wrap: wrap; }
+    .time-box { background: rgba(255,255,255,.7); border: 1px solid rgba(215,164,89,.4); border-radius: 16px; padding: 14px 10px; min-width: 70px; }
+    .time-box .num { font-family: var(--display); font-size: 28px; color: var(--verm); line-height: 1; }
+    .time-box .lbl { font-size: 10px; letter-spacing: 1px; text-transform: uppercase; color: var(--gold-deep); margin-top: 4px; }
 
-    .sun-mandala::before,
-    .sun-mandala::after {
-      content: "";
-      position: absolute;
-      inset: 50%;
-      transform: translate(-50%, -50%);
-      border-radius: 50%;
-    }
-
-    .sun-mandala::before {
-      width: 220px;
-      height: 220px;
-      background:
-        radial-gradient(circle, rgba(255,232,183,.75), rgba(255,232,183,.08) 48%, transparent 62%);
-      animation: breathe 4s ease-in-out infinite;
-    }
-
-    @keyframes breathe {
-      0%, 100% { transform: translate(-50%, -50%) scale(1); }
-      50% { transform: translate(-50%, -50%) scale(1.05); }
-    }
-
-    .sun-mandala::after {
-      width: 150px;
-      height: 150px;
-      border: 1px dashed rgba(215,164,89,.45);
-      animation: spinSlow 20s linear infinite;
-    }
-
-    @keyframes spinSlow {
-      100% { transform: translate(-50%, -50%) rotate(360deg); }
-    }
-
-    .mandala-svg {
-      position: absolute;
-      inset: 0;
-    }
-
-    .mandala-svg circle,
-    .mandala-svg path {
-      fill: none;
-      stroke: rgba(215,164,89,.82);
-      stroke-width: 1.3;
-      stroke-linecap: round;
-      stroke-dasharray: 1000;
-      stroke-dashoffset: 1000;
-      animation: drawLine 3.2s var(--ease-soft) forwards;
-    }
-
-    @keyframes drawLine {
-      to { stroke-dashoffset: 0; }
-    }
-
-    .invocation {
-      font-family: var(--deva);
-      font-size: 20px;
-      color: var(--verm);
-    }
-
-    .invocation .en {
-      display: block;
-      margin-top: 8px;
-      font-family: var(--classic);
-      font-size: 11px;
-      letter-spacing: 4px;
-      text-transform: uppercase;
-      color: var(--teal);
-    }
-
-    .eyebrow {
-      margin-top: 28px;
-      color: var(--teal);
-      font-family: var(--body-serif);
-      font-size: 20px;
-      font-style: italic;
-    }
-
-    .couple {
-      margin-top: 16px;
-    }
-
-    .couple .name {
-      display: block;
-      font-family: var(--display);
-      color: var(--verm);
-      font-weight: 600;
-      font-size: clamp(40px, 8vw, 58px);
-      line-height: 1.08;
-      letter-spacing: .4px;
-    }
-
-    .couple .amp {
-      display: block;
-      margin: 8px 0 4px;
-      font-family: var(--body-serif);
-      font-size: 34px;
-      color: var(--gold-deep);
-      font-style: italic;
-    }
-
-    .telugu-line {
-      margin-top: 14px;
-      font-family: var(--telugu);
-      font-size: 22px;
-      color: var(--gold-deep);
-    }
-
-    .hero-text {
-      margin: 24px auto 0;
-      max-width: 460px;
-      font-family: var(--body-serif);
-      font-size: 24px;
-      line-height: 1.35;
-      color: var(--ink);
-    }
-
-    /* BLESSING STRIP */
-    #blessing {
-      padding-top: 46px;
-      padding-bottom: 46px;
-      background:
-        linear-gradient(180deg, rgba(215,164,89,.08), rgba(255,255,255,0)),
-        linear-gradient(180deg, rgba(31,91,82,.03), rgba(31,91,82,0));
-    }
-
-    .icons-row {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 18px;
-      flex-wrap: wrap;
-      margin-bottom: 18px;
-      color: var(--gold-deep);
-      opacity: .9;
-    }
-
-    .icons-row span {
-      width: 34px;
-      height: 34px;
-      display: grid;
-      place-items: center;
-      border: 1px solid rgba(215,164,89,.35);
-      border-radius: 50%;
-      font-size: 16px;
-      background: rgba(255,255,255,.54);
-    }
-
-    .blessing-copy {
-      max-width: 500px;
-      margin: 0 auto;
-      font-family: var(--body-serif);
-      font-size: 28px;
-      line-height: 1.32;
-      color: var(--teal);
-      font-style: italic;
-    }
-
-    /* FAMILY */
-    #families {
-      background:
-        radial-gradient(circle at 50% 50%, rgba(215,164,89,.06), transparent 45%);
-    }
-
-    .section-title {
-      font-family: var(--display);
-      font-size: clamp(30px, 5vw, 40px);
-      color: var(--verm);
-      line-height: 1.12;
-    }
-
-    .section-sub {
-      margin: 14px auto 0;
-      max-width: 520px;
-      font-family: var(--body-serif);
-      font-size: 22px;
-      color: var(--ink);
-      opacity: .88;
-      line-height: 1.35;
-    }
-
-    .families-grid {
-      margin-top: 42px;
-      display: grid;
-      gap: 18px;
-      align-items: center;
-    }
-
-    @media (min-width: 680px) {
-      .families-grid {
-        grid-template-columns: 1fr auto 1fr;
-        gap: 22px;
-      }
-    }
-
-    .family-card {
-      position: relative;
-      background: linear-gradient(180deg, #fffdf8, #f8f0e2);
-      border: 1px solid rgba(215,164,89,.45);
-      border-radius: 22px;
-      padding: 26px 22px;
+    /* DETAILS */
+    .section-title { font-family: var(--display); font-size: clamp(30px, 5vw, 40px); color: var(--verm); line-height: 1.12; }
+    .section-sub { margin: 14px auto 0; max-width: 520px; font-family: var(--body-serif); font-size: 22px; color: var(--ink); opacity: .88; line-height: 1.35; }
+    .detail-card {
+      margin: 28px auto 0; max-width: 500px; background: linear-gradient(180deg, #fffdf8, #f8f0e2);
+      border: 1px solid rgba(215,164,89,.45); border-radius: 22px; padding: 26px 22px;
       box-shadow: 0 14px 34px rgba(60,28,18,.06);
     }
+    .detail-card h3 { font-family: var(--display); font-size: 26px; color: var(--verm); margin-bottom: 8px; }
+    .detail-card p { font-size: 18px; line-height: 1.6; margin: 6px 0; }
 
-    .family-card .role {
-      font-size: 11px;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: var(--gold-deep);
-      margin-bottom: 10px;
+    /* BUTTONS */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      padding: 14px 24px; border-radius: 999px; border: 1px solid var(--gold);
+      background: var(--gold); color: #fff; font-weight: 600; font-size: 14px;
+      letter-spacing: 1px; text-transform: uppercase; cursor: pointer; margin: 8px;
+      transition: transform .2s ease, box-shadow .2s ease;
     }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(215,164,89,.3); }
+    .btn-outline { background: transparent; color: var(--gold-deep); }
 
-    .family-card .person {
-      font-family: var(--display);
-      font-size: 30px;
-      color: var(--verm);
-      font-weight: 600;
-      line-height: 1.1;
-    }
+    /* FOOTER */
+    footer { padding: 40px 28px; text-align: center; font-size: 14px; color: var(--gold-deep); opacity: .8; }
+  </style>
+</head>
+<body class="locked">
+  <!-- Decorative Frame -->
+  <div class="frame">
+    <svg class="corner tl" viewBox="0 0 30 30"><path d="M0 30 V5 Q5 0 10 0 H30"/></svg>
+    <svg class="corner tr" viewBox="0 0 30 30"><path d="M0 30 V5 Q5 0 10 0 H30"/></svg>
+    <svg class="corner bl" viewBox="0 0 30 30"><path d="M0 30 V5 Q5 0 10 0 H30"/></svg>
+    <svg class="corner br" viewBox="0 0 30 30"><path d="M0 30 V5 Q5 0 10 0 H30"/></svg>
+  </div>
 
-    .family-card .parents {
-      margin-top: 10px;
-      font-family: var(--body-serif);
-      font-size: 22px;
-      color: var(--ink);
-      line-height: 1.3;
-    }
+  <!-- INTRO SCREEN -->
+  <div id="intro">
+    <div class="intro-content">
+      <div class="diya">
+        <svg class="flame" viewBox="0 0 100 100">
+          <path d="M50 85 Q35 55 50 20 Q65 55 50 85" fill="#ffd36f"/>
+          <path d="M50 80 Q40 60 50 35 Q60 60 50 80" fill="#ff9a3d" opacity=".7"/>
+        </svg>
+      </div>
+      <div class="intro-mantra">शुभ विवाह</div>
+      <div class="intro-sub">Shubha Vivaha</div>
+      <button class="begin-btn" onclick="enterSite()">Enter Invitation</button>
+    </div>
+  </div>
 
-    .joiner {
-      display: grid;
-      place-items: center;
-      min-height: 1
+  <!-- MAIN CONTENT -->
+  <div class="shell">
+    <!-- HERO -->
+    <section id="hero">
+      <div class="eyebrow reveal">With the blessings of our families</div>
+      <div class="couple reveal">
+        <span class="name">Sharath Chandran</span>
+        <span class="amp">&</span>
+        <span class="name">Sowmya</span>
+      </div>
+      <div class="telugu-line reveal">మా వివాహ వేడుకకు ఆహ్వానం</div>
+      <p class="hero-text reveal">Wednesday, 24 June 2026<br/>Hyderabad, Telangana</p>
       
+      <div class="divider reveal">
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      </div>
+
+      <div class="countdown reveal" id="countdown">
+        <div class="time-box"><div class="num" id="days">00</div><div class="lbl">Days</div></div>
+        <div class="time-box"><div class="num" id="hours">00</div><div class="lbl">Hours</div></div>
+        <div class="time-box"><div class="num" id="mins">00</div><div class="lbl">Mins</div></div>
+        <div class="time-box"><div class="num" id="secs">00</div><div class="lbl">Secs</div></div>
+      </div>
+    </section>
+
+    <!-- WEDDING DETAILS -->
+    <section id="details">
+      <h2 class="section-title reveal">Wedding Ceremony</h2>
+      <p class="section-sub reveal">Join us as we celebrate love, tradition, and new beginnings</p>
+      
+      <div class="detail-card reveal">
+        <h3>Muhurtham</h3>
+        <p><strong>Date:</strong> Wednesday, 24 June 2026</p>
+        <p><strong>Time:</strong> 9:30 AM onwards</p>
+        <p><strong>Venue:</strong> Sri Venkateswara Convention Hall<br/>Gachibowli, Hyderabad - 500032</p>
+        <a class="btn" href="https://maps.google.com/?q=Gachibowli+Hyderabad" target="_blank">View on Map</a>
+      </div>
+    </section>
+
+    <!-- RSVP -->
+    <section id="rsvp">
+      <h2 class="section-title reveal">Your Presence</h2>
+      <p class="section-sub reveal">Kindly let us know if you’ll be joining the celebration</p>
+      <a class="btn" href="https://wa.me/919000?text=Attending%20Sharath%20%26%20Sowmya%20Wedding%20on%2024%20June%202026" target="_blank">RSVP on WhatsApp</a>
+      <a class="btn btn-outline" href="tel:+919000">Call Us</a>
+    </section>
+
+    <footer>
+      Made with love for Sharath & Sowmya<br/>
+      "Two souls, one journey"
+    </footer>
+  </div>
+
+  <script>
+    function enterSite() {
+      document.getElementById('intro').classList.add('hidden');
+      document.body.classList.remove('locked');
+      // Trigger reveal animations
+      setTimeout(() => {
+        document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
+      }, 100);
+    }
+
+    // Countdown to 24 June 2026, 9:30 AM IST
+    const weddingDate = new Date('2026-06-24T09:30:00+05:30').getTime();
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = weddingDate - now;
+      if (distance > 0) {
+        document.getElementById('days').textContent = String(Math.floor(distance / (1000 * 60 * 60 * 24))).padStart(2, '0');
+        document.getElementById('hours').textContent = String(Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))).padStart(2, '0');
+        document.getElementById('mins').textContent = String(Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))).padStart(2, '0');
+        document.getElementById('secs').textContent = String(Math.floor((distance % (1000 * 60)) / 1000)).padStart(2, '0');
+      }
+    }
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+
+    // Reveal on scroll
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('in');
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
