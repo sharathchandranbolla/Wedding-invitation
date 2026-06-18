@@ -1,620 +1,88 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-<title>Sharath Chandran & Sowmya | Wedding Invitation</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Marcellus&family=Mukta:wght@300;400;500;600&family=Tiro+Devanagari+Sanskrit&family=Ramabhadra&family=Mallanna&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --maroon: #5e1420;
-    --maroon-deep: #3f0d15;
-    --gold: #c9974d;
-    --gold-light: #e8c585;
-    --ivory: #fff8ec;
-    --teal: #1f4e3d;
-    --saffron: #e8a33d;
-    --ink: #2a1810;
-  }
+<!-- DOOR INTRO -->
+<div id="tap-prompt" role="button" tabindex="0" aria-label="Open Invitation">
+  <span class="om">ॐ</span>
+  <span class="names-mini">Sharath Chandran &amp; Sowmya</span>
+  <span class="instruction">Tap to Open the Invitation</span>
+</div>
 
-  * { margin: 0; padding: 0; box-sizing: border-box; }
+<!-- HERO -->
+<section id="hero">
+  <div class="corner-motif">ௐ</div>
+  <div class="ganesha">Shree Ganeshaya Namah</div>
+  <p class="invite-tagline">Two Families, One Sacred Bond</p>
 
-  @media (prefers-reduced-motion: reduce) {
-    *, *::before, *::after {
-      animation-duration: 0.01ms !important;
-      animation-iteration-count: 1 !important;
-      transition-duration: 0.01ms !important;
-    }
-  }
+  <div class="couple-names">
+    <span class="name">Sharath Chandran</span>
+    <span class="amp">&amp;</span>
+    <span class="name">Sowmya</span>
+  </div>
 
-  html, body {
-    background: var(--maroon-deep);
-    font-family: 'Mallanna', 'Mukta', sans-serif;
-    color: var(--ink);
-    overflow-x: hidden;
-    width: 100%;
-  }
+  <p class="with-blessings">
+    With the blessings of our families, we invite you to celebrate our wedding and share in our joy.
+  </p>
+</section>
 
-  /* ============ DOOR OVERLAY ============ */
-  #door-screen {
-    position: fixed;
-    inset: 0;
-    z-index: 1000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: var(--maroon-deep);
-  }
-
-  .door-panel {
-    position: absolute;
-    top: 0;
-    height: 100%;
-    width: 50%;
-    background:
-      radial-gradient(circle at 50% 8%, var(--gold-light) 0%, transparent 2%),
-      repeating-linear-gradient(0deg, transparent 0 38px, rgba(201,151,77,0.18) 38px 40px),
-      linear-gradient(180deg, #7a1b29 0%, #5e1420 45%, #3f0d15 100%);
-    transition: transform 1.4s cubic-bezier(.76,0,.24,1);
-    box-shadow: inset 0 0 60px rgba(0,0,0,0.5);
-  }
-  .door-left  { left: 0; border-right: 3px solid var(--gold); transform-origin: left center; }
-  .door-right { right: 0; border-left: 3px solid var(--gold); transform-origin: right center; }
-
-  .door-carving {
-    position: absolute;
-    top: 6%;
-    bottom: 6%;
-    left: 10%;
-    right: 10%;
-    border: 2px solid var(--gold);
-    opacity: 0.55;
-  }
-  .door-carving::before, .door-carving::after {
-    content: '❀';
-    position: absolute;
-    color: var(--gold);
-    font-size: 22px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  .door-carving::before { top: -14px; }
-  .door-carving::after { bottom: -14px; }
-
-  .door-panel .pillar-dots {
-    position: absolute;
-    left: 50%;
-    top: 12%;
-    transform: translateX(-50%);
-    display: flex;
-    flex-direction: column;
-    gap: 28px;
-  }
-  .pillar-dots span {
-    width: 6px; height: 6px;
-    background: var(--gold);
-    border-radius: 50%;
-    opacity: 0.7;
-  }
-
-  .door-center-seam {
-    position: absolute;
-    top: 0; bottom: 0; left: 50%;
-    width: 2px;
-    background: var(--gold);
-    z-index: 2;
-    box-shadow: 0 0 12px rgba(201,151,77,0.7);
-  }
-
-  #tap-prompt {
-    position: relative;
-    z-index: 3;
-    text-align: center;
-    color: var(--gold-light);
-    cursor: pointer;
-    animation: pulse-prompt 2.2s ease-in-out infinite;
-    -webkit-tap-highlight-color: transparent;
-  }
-  #tap-prompt .om {
-    font-family: 'Tiro Devanagari Sanskrit', serif;
-    font-size: 54px;
-    display: block;
-    margin-bottom: 14px;
-    color: var(--gold);
-    text-shadow: 0 0 18px rgba(201,151,77,0.55);
-  }
-  #tap-prompt .names-mini {
-    font-family: 'Ramabhadra', 'Marcellus', serif;
-    font-size: 20px;
-    letter-spacing: 0.5px;
-    color: var(--ivory);
-  }
-  #tap-prompt .instruction {
-    margin-top: 18px;
-    font-size: 13px;
-    letter-spacing: 0.5px;
-    color: var(--gold);
-    opacity: 0.85;
-  }
-
-  @keyframes pulse-prompt {
-    0%, 100% { opacity: 1; transform: scale(1); }
-    50% { opacity: 0.75; transform: scale(0.97); }
-  }
-
-  body.opened #door-screen { pointer-events: none; }
-  body.opened .door-left  { transform: rotateY(-92deg) translateX(0); }
-  body.opened .door-right { transform: rotateY(92deg) translateX(0); }
-  body.opened #door-screen { transition: visibility 0s 1.4s; visibility: hidden; }
-  body.opened #tap-prompt { opacity: 0; transition: opacity 0.3s; }
-
-  #door-screen { perspective: 1600px; }
-
-  /* ============ MAIN CONTENT ============ */
-  #invite {
-    position: relative;
-    max-width: 560px;
-    margin: 0 auto;
-    background: var(--ivory);
-    min-height: 100vh;
-    background-image:
-      radial-gradient(circle at 0% 0%, rgba(201,151,77,0.08), transparent 40%),
-      radial-gradient(circle at 100% 100%, rgba(31,78,61,0.06), transparent 40%);
-  }
-
-  .border-frame {
-    position: fixed;
-    inset: 10px;
-    max-width: 540px;
-    margin: 0 auto;
-    border: 2px solid var(--gold);
-    pointer-events: none;
-    z-index: 1;
-  }
-  .border-frame::before {
-    content: '';
-    position: absolute;
-    inset: 10px;
-    border: 1px solid var(--gold);
-    opacity: 0.5;
-  }
-
-  section {
-    position: relative;
-    padding: 56px 36px;
-    text-align: center;
-  }
-
-  .corner-motif {
-    font-family: 'Tiro Devanagari Sanskrit', serif;
-    color: var(--gold);
-    font-size: 26px;
-    opacity: 0.8;
-  }
-
-  .divider {
-    width: 70px;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, var(--gold), transparent);
-    margin: 22px auto;
-  }
-
-  /* ---- Hero ---- */
-  #hero {
-    padding-top: 64px;
-    opacity: 0;
-    transform: translateY(16px);
-    transition: opacity 1s ease, transform 1s ease;
-  }
-  body.opened #hero { opacity: 1; transform: translateY(0); transition-delay: 0.5s; }
-
-  .ganesha {
-    font-family: 'Tiro Devanagari Sanskrit', serif;
-    font-size: 34px;
-    color: var(--maroon);
-    letter-spacing: 1px;
-  }
-  .invite-tagline {
-    font-family: 'Mallanna', 'Cormorant Garamond', serif;
-    font-style: normal;
-    font-size: 15px;
-    color: var(--teal);
-    margin-top: 10px;
-    letter-spacing: 0.3px;
-  }
-
-  .couple-names {
-    margin-top: 34px;
-  }
-  .couple-names .name {
-    font-family: 'Ramabhadra', 'Marcellus', serif;
-    font-size: clamp(32px, 8.5vw, 44px);
-    color: var(--maroon);
-    line-height: 1.4;
-  }
-  .couple-names .amp {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 24px;
-    color: var(--gold);
-    display: block;
-    margin: 6px 0;
-  }
-
-  /* Kolam signature element */
-  #kolam {
-    margin: 30px auto 10px;
-    width: 180px;
-    height: 180px;
-    display: block;
-  }
-  #kolam path, #kolam circle {
-    fill: none;
-    stroke: var(--gold);
-    stroke-width: 1.6;
-    stroke-linecap: round;
-    stroke-dasharray: 1000;
-    stroke-dashoffset: 1000;
-  }
-  body.opened #kolam path, body.opened #kolam circle {
-    animation: draw-kolam 2.8s ease forwards;
-  }
-  #kolam .dot { fill: var(--saffron); stroke: none; opacity: 0; }
-  body.opened #kolam .dot {
-    animation: fade-dot 0.6s ease forwards;
-  }
-  @keyframes draw-kolam {
-    to { stroke-dashoffset: 0; }
-  }
-  @keyframes fade-dot {
-    to { opacity: 1; }
-  }
-
-  .with-blessings {
-    margin-top: 18px;
-    font-size: 14.5px;
-    letter-spacing: 0.3px;
-    color: var(--teal);
-  }
-
-  /* ---- Families ---- */
-  #families {
-    background: linear-gradient(180deg, transparent, rgba(201,151,77,0.06), transparent);
-  }
-  .family-block {
-    margin-bottom: 28px;
-  }
-  .family-role {
-    font-family: 'Mallanna', sans-serif;
-    font-size: 13.5px;
-    letter-spacing: 0.5px;
-    color: var(--gold);
-    margin-bottom: 6px;
-  }
-  .family-name {
-    font-family: 'Ramabhadra', 'Cormorant Garamond', serif;
-    font-size: 23px;
-    color: var(--maroon);
-    font-weight: 600;
-  }
-  .family-parents {
-    font-family: 'Mallanna', 'Mukta', sans-serif;
-    font-size: 14.5px;
-    color: var(--ink);
-    opacity: 0.8;
-    margin-top: 4px;
-  }
-
-  /* ---- Event Details ---- */
-  #event {
-    background: var(--maroon);
-    color: var(--ivory);
-    border-radius: 0;
-  }
-  #event .corner-motif { color: var(--gold-light); }
-  #event .section-label {
-    font-size: 12px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: var(--gold-light);
-    margin-bottom: 16px;
-  }
-  .muhurtham-time {
-    font-family: 'Marcellus', serif;
-    font-size: 42px;
-    color: var(--gold-light);
-    margin: 6px 0 2px;
-  }
-  .muhurtham-label {
-    font-size: 12.5px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    opacity: 0.75;
-  }
-  .event-date {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 22px;
-    margin-top: 18px;
-    color: var(--ivory);
-  }
-  .event-day {
-    font-size: 13px;
-    opacity: 0.7;
-    margin-top: 2px;
-  }
-
-  .venue-card {
-    margin-top: 30px;
-    padding: 22px 18px;
-    border: 1px solid rgba(201,151,77,0.5);
-    border-radius: 4px;
-    background: rgba(255,255,255,0.03);
-  }
-  .venue-name {
-    font-family: 'Mallanna', 'Cormorant Garamond', serif;
-    font-size: 18px;
-    color: var(--gold-light);
-    line-height: 1.6;
-  }
-  .venue-city {
-    font-size: 13.5px;
-    margin-top: 6px;
-    opacity: 0.75;
-  }
-  .map-link {
-    display: inline-block;
-    margin-top: 16px;
-    padding: 10px 26px;
-    border: 1px solid var(--gold);
-    color: var(--gold-light);
-    text-decoration: none;
-    font-size: 12.5px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    border-radius: 2px;
-    transition: background 0.3s, color 0.3s;
-  }
-  .map-link:active { background: var(--gold); color: var(--maroon-deep); }
-
-  /* ---- Countdown ---- */
-  #countdown-wrap {
-    padding-top: 44px;
-    padding-bottom: 44px;
-  }
-  .countdown-label {
-    font-size: 12px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: var(--teal);
-    margin-bottom: 18px;
-  }
-  #countdown {
-    display: flex;
-    justify-content: center;
-    gap: 14px;
-  }
-  .cd-unit {
-    background: var(--ivory);
-    border: 1.5px solid var(--gold);
-    border-radius: 6px;
-    width: 68px;
-    padding: 12px 0;
-  }
-  .cd-num {
-    font-family: 'Marcellus', serif;
-    font-size: 26px;
-    color: var(--maroon);
-    display: block;
-  }
-  .cd-unit-label {
-    font-size: 10px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: var(--teal);
-    margin-top: 4px;
-    display: block;
-  }
-
-  /* ---- Footer ---- */
-  #footer {
-    padding-bottom: 70px;
-  }
-  .footer-line {
-    font-family: 'Mallanna', 'Cormorant Garamond', serif;
-    font-style: normal;
-    font-size: 17px;
-    color: var(--maroon);
-    line-height: 1.8;
-    max-width: 380px;
-    margin: 0 auto;
-  }
-  .footer-names {
-    margin-top: 22px;
-    font-family: 'Ramabhadra', 'Marcellus', serif;
-    font-size: 19px;
-    color: var(--gold);
-    letter-spacing: 1px;
-  }
-
-  /* Floating petals */
-  .petal-field {
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    z-index: 2;
-    overflow: hidden;
-    opacity: 0;
-    transition: opacity 1.5s ease;
-  }
-  body.opened .petal-field { opacity: 1; }
-  .petal {
-    position: absolute;
-    top: -5%;
-    font-size: 16px;
-    color: var(--saffron);
-    opacity: 0.7;
-    animation: fall linear infinite;
-  }
-  @keyframes fall {
-    to { transform: translateY(110vh) rotate(360deg); }
-  }
-
-  @media (max-width: 380px) {
-    section { padding: 44px 22px; }
-    .couple-names .name { font-size: 30px; }
-  }
-</style>
-</head>
-<body>
-
-  <!-- DOOR INTRO -->
-  <div id="door-screen" aria-hidden="false">
-    <div class="door-panel door-left">
-      <div class="door-carving"></div>
-      <div class="pillar-dots"><span></span><span></span><span></span><span></span><span></span></div>
-    </div>
-    <div class="door-panel door-right">
-      <div class="door-carving"></div>
-      <div class="pillar-dots"><span></span><span></span><span></span><span></span><span></span></div>
-    </div>
-    <div class="door-center-seam"></div>
-    <div id="tap-prompt" role="button" tabindex="0" aria-label="ఆహ్వానం తెరవడానికి తాకండి">
-      <span class="om">ॐ</span>
-      <span class="names-mini">శరత్ చంద్రన్ &amp; సౌమ్య</span>
-      <span class="instruction">తలుపులు తెరవడానికి తాకండి</span>
+<!-- FAMILIES -->
+<section id="families">
+  <div class="family-block">
+    <div class="family-role">Groom</div>
+    <div class="family-name">Sharath Chandran</div>
+    <div class="family-parents">
+      Beloved Younger Son of Mr. Satyanarayana &amp; Mrs. Padma
     </div>
   </div>
 
-  <div class="petal-field" id="petalField"></div>
-  <div class="border-frame"></div>
+  <div class="divider"></div>
 
-  <main id="invite">
+  <div class="family-block">
+    <div class="family-role">Bride</div>
+    <div class="family-name">Sowmya</div>
+    <div class="family-parents">
+      Beloved Younger Daughter of Mr. Koteswara Rao &amp; Mrs. Sridevi
+    </div>
+  </div>
+</section>
 
-    <!-- HERO -->
-    <section id="hero">
-      <div class="corner-motif">ௐ</div>
-      <div class="ganesha">శ్రీ గణేశాయ నమః</div>
-      <p class="invite-tagline">రెండు కుటుంబాలు, ఒక పవిత్ర బంధం</p>
+<!-- EVENT DETAILS -->
+<section id="event">
+  <div class="corner-motif">❀</div>
 
-      <div class="couple-names">
-        <span class="name">శరత్ చంద్రన్</span>
-        <span class="amp">&amp;</span>
-        <span class="name">సౌమ్య</span>
-      </div>
+  <div class="section-label">Wedding Ceremony</div>
 
-      <!-- Kolam signature animation -->
-      <svg id="kolam" viewBox="0 0 200 200">
-        <circle cx="100" cy="100" r="78" />
-        <path d="M100 22 C140 50, 178 90, 100 100 C22 110, 60 150, 100 178 C140 150, 178 110, 100 100 C22 90, 60 50, 100 22 Z" />
-        <circle class="dot" cx="100" cy="22" r="3.5" />
-        <circle class="dot" cx="178" cy="100" r="3.5" />
-        <circle class="dot" cx="100" cy="178" r="3.5" />
-        <circle class="dot" cx="22" cy="100" r="3.5" />
-      </svg>
+  <div class="muhurtham-time">8:45 AM</div>
+  <div class="muhurtham-label">Auspicious Wedding Time</div>
 
-      <p class="with-blessings">మీ ఆశీర్వాదాలు, సమక్షం మాకు ముఖ్యం</p>
-    </section>
+  <div class="event-date">24 June 2026</div>
+  <div class="event-day">Wednesday</div>
 
-    <!-- FAMILIES -->
-    <section id="families">
-      <div class="family-block">
-        <div class="family-role">వరుడు</div>
-        <div class="family-name">శరత్ చంద్రన్</div>
-        <div class="family-parents">సత్యనారాయణ &amp; పద్మ గారల ముద్దుల కుమారుడు</div>
-      </div>
-      <div class="divider"></div>
-      <div class="family-block">
-        <div class="family-role">వధువు</div>
-        <div class="family-name">సౌమ్య</div>
-        <div class="family-parents">కోటేశ్వర రావు &amp; శ్రీదేవి గారల ముద్దుల కుమార్తె</div>
-      </div>
-    </section>
+  <div class="venue-card">
+    <div class="venue-name">
+      Sri Bhramaramba Mallikarjuna Swamy<br>
+      Kalyana Mandapam
+    </div>
 
-    <!-- EVENT DETAILS -->
-    <section id="event">
-      <div class="corner-motif">❀</div>
-      <div class="section-label">ముహూర్తం</div>
-      <div class="muhurtham-time">8:45 AM</div>
-      <div class="muhurtham-label">శుభ వివాహ సమయం</div>
+    <div class="venue-city">
+      Near JNTU Metro Station, Hyderabad, Telangana
+    </div>
 
-      <div class="event-date">24 జూన్ 2026</div>
-      <div class="event-day">బుధవారం</div>
+    <a class="map-link"
+      href="https://www.google.com/maps/search/?api=1&query=Sri+Bhramaramba+Mallikarjuna+Swamy+Kalyana+Mandapam+JNTU+Metro+Station+Hyderabad"
+      target="_blank"
+      rel="noopener">
+      View Location
+    </a>
+  </div>
+</section>
 
-      <div class="venue-card">
-        <div class="venue-name">శ్రీ భ్రమరాంబ మల్లికార్జున<br>స్వామి కల్యాణ మండపం</div>
-        <div class="venue-city">జేఎన్‌టీయూ మెట్రో స్టేషన్ సమీపంలో, హైదరాబాద్, తెలంగాణ</div>
-        <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Sri+Bhramaramba+Mallikarjuna+Swamy+Kalyana+Mandapam+JNTU+Metro+Station+Hyderabad" target="_blank" rel="noopener">మ్యాప్‌లో చూడండి</a>
-      </div>
-    </section>
+<!-- FOOTER -->
+<section id="footer">
+  <div class="divider"></div>
 
-    <!-- COUNTDOWN -->
-    <section id="countdown-wrap">
-      <div class="countdown-label">Counting down to the celebration</div>
-      <div id="countdown">
-        <div class="cd-unit"><span class="cd-num" id="cd-days">00</span><span class="cd-unit-label">Days</span></div>
-        <div class="cd-unit"><span class="cd-num" id="cd-hours">00</span><span class="cd-unit-label">Hrs</span></div>
-        <div class="cd-unit"><span class="cd-num" id="cd-mins">00</span><span class="cd-unit-label">Min</span></div>
-        <div class="cd-unit"><span class="cd-num" id="cd-secs">00</span><span class="cd-unit-label">Sec</span></div>
-      </div>
-    </section>
+  <p class="footer-line">
+    Together with our families, we request the honor of your presence and blessings as we begin this beautiful journey of love, companionship, and togetherness.
+  </p>
 
-    <!-- FOOTER -->
-    <section id="footer">
-      <div class="divider"></div>
-      <p class="footer-line">"Where minds meet without fear, and hearts unite as one — may every step ahead be taken together."</p>
-      <p class="footer-names">Sharath Chandran &amp; Sowmya</p>
-    </section>
-
-  </main>
-
-<script>
-  // Door open interaction
-  const doorScreen = document.getElementById('door-screen');
-  const tapPrompt = document.getElementById('tap-prompt');
-  function openDoors() {
-    document.body.classList.add('opened');
-    spawnPetals();
-  }
-  tapPrompt.addEventListener('click', openDoors);
-  tapPrompt.addEventListener('keypress', function(e){
-    if (e.key === 'Enter' || e.key === ' ') openDoors();
-  });
-
-  // Floating petals
-  function spawnPetals() {
-    const field = document.getElementById('petalField');
-    const symbols = ['❀','✿','❁'];
-    for (let i = 0; i < 14; i++) {
-      const p = document.createElement('span');
-      p.className = 'petal';
-      p.textContent = symbols[Math.floor(Math.random()*symbols.length)];
-      p.style.left = Math.random()*100 + '%';
-      p.style.fontSize = (12 + Math.random()*10) + 'px';
-      p.style.animationDuration = (8 + Math.random()*7) + 's';
-      p.style.animationDelay = (Math.random()*6) + 's';
-      p.style.opacity = (0.4 + Math.random()*0.4).toFixed(2);
-      field.appendChild(p);
-    }
-  }
-
-  // Countdown to 24 June 2026, 8:45 AM IST
-  const weddingDate = new Date('2026-06-24T08:45:00+05:30').getTime();
-  function updateCountdown() {
-    const now = Date.now();
-    let diff = weddingDate - now;
-    if (diff < 0) diff = 0;
-    const days = Math.floor(diff / (1000*60*60*24));
-    const hours = Math.floor((diff / (1000*60*60)) % 24);
-    const mins = Math.floor((diff / (1000*60)) % 60);
-    const secs = Math.floor((diff / 1000) % 60);
-    document.getElementById('cd-days').textContent = String(days).padStart(2,'0');
-    document.getElementById('cd-hours').textContent = String(hours).padStart(2,'0');
-    document.getElementById('cd-mins').textContent = String(mins).padStart(2,'0');
-    document.getElementById('cd-secs').textContent = String(secs).padStart(2,'0');
-  }
-  updateCountdown();
-  setInterval(updateCountdown, 1000);
-</script>
-</body>
-</html>
+  <p class="footer-names">
+    Sharath Chandran &amp; Sowmya
+  </p>
+</section>
